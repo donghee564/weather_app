@@ -1,0 +1,8 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  width: 11.5%;
+  padding: 30px 0;
+  text-align: center;
+}

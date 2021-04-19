@@ -1,0 +1,11 @@
+.header {
+  text-align: center;
+}
+.city {
+  font-weight: lighter;
+  font-size: 24px;
+}
+.currDate {
+  margin-top: 5px;
+  font-size: 14px;
+}
