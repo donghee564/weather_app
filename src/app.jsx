@@ -22,7 +22,7 @@ function App({ openWeather }) {
           setWeathers({
             timezone: result.timezone,
             current: result.current,
-            daily: result.daily,
+            daily: result.daily.splice(1),
             currentWeather: result.current.weather,
           });
         });
@@ -33,15 +33,12 @@ function App({ openWeather }) {
     };
 
     navigator.geolocation.getCurrentPosition(getGeoSuccess, getGeoError);
-  }, []);
-
+  }, [openWeather]);
+  console.log(weathers.currentWeather);
   return (
     <div className={styles.app}>
       <Header timezone={weathers.timezone} current={weathers.current} />
-      <WeatherCurrent
-        weather={weathers.current}
-        currentWeather={weathers.currentWeather}
-      />
+      <WeatherCurrent weather={weathers.current} />
       <WeatherList weathersList={weathers.daily} />
     </div>
   );

@@ -7,6 +7,6 @@
 }
 body {
   color: #fff;
-  background: lightgray;
-  /* background: url(./img/night_sky.jpg) no-repeat center center/cover fixed; */
+  background: url("./img/sunyu-kim-HjsWTyyVDgg-unsplash.jpg") no-repeat center
+    center/cover fixed;
 }

@@ -1,9 +1,9 @@
 .app {
-  border: 1px solid white;
   border-radius: 10px;
   width: 900px;
+  height: 500px;
   padding: 20px;
-  margin: 150px auto;
+  margin: 20vh auto;
   font-family: "Roboto", sans-serif;
-  background: url("./img/night_sky.jpg") no-repeat center center/cover;
+  background-color: rgba(46, 45, 45, 0.465);
 }

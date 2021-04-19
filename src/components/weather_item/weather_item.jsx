@@ -10,12 +10,12 @@ const WeatherItem = ({ weather }) => {
 
   return (
     <li className={styles.weather}>
-      <h2>{moment(date).format("dddd")}</h2>
+      <h4>{moment(date).format("dddd")}</h4>
       <p>{moment(date).format("MMM Do")}</p>
       <p>
         온도 {weather.temp.day} <sup>o</sup>C
       </p>
-      <h3>날씨 {weather.weather[0].main}</h3>
+      <h5>날씨 {weather.weather[0].main}</h5>
       {weather.rain && <p>강수량 {weather.rain}</p>}
     </li>
   );
