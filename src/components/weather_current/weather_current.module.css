@@ -7,7 +7,7 @@
 }
 
 .weatherIcon {
-  font-size: 80px;
+  font-size: 120px;
   margin-right: 5%;
   text-align: center;
 }
@@ -18,13 +18,13 @@
 }
 
 .temp {
-  margin-right: 4%;
+  margin-right: 5%;
 }
 .temp p {
   text-align: center;
 }
 .temp > h1 {
-  font-size: 80px;
+  font-size: 125px;
   letter-spacing: -1.5px;
   color: rgb(221, 218, 61);
 }
@@ -41,12 +41,17 @@
 
 .details > h3 {
   font-weight: normal;
-  font-size: 13px;
-  margin-top: 5px;
-  margin-bottom: 7px;
+  font-size: 21px;
+  margin-top: 20px;
 }
 
 .details ul li {
-  font-size: 12px;
-  padding-top: 6px;
+  margin-top: 9px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.details ul li p {
+  margin-left: 10px;
 }

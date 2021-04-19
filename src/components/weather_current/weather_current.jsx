@@ -10,12 +10,13 @@ const WeatherCurrent = ({ weather }) => {
     <section className={styles.weatherCurrent}>
       <div className={styles.weatherIcon}>
         <CloudSun />
-        {/* <p>{weather.weather[0].description}</p> */}
+        <p>{weather.weather[0].description}</p>
       </div>
       <div className={styles.temp}>
         <h1>
           {Math.floor(weather.temp)}
           <span>°C</span>
+          <p></p>
         </h1>
         <p>Feels like {weather.feels_like}°</p>
       </div>
@@ -23,16 +24,16 @@ const WeatherCurrent = ({ weather }) => {
         <h3>MORE DETAILS</h3>
         <ul>
           <li>
-            <Wind /> Wind {weather.wind_speed}m/s
+            <Wind /> <p>Wind {weather.wind_speed}m/s</p>
           </li>
           <li>
-            <Eye /> Visibility {weather.visibility * 0.001}km
+            <Eye /> <p>Visibility {weather.visibility * 0.001}km</p>
           </li>
           <li>
-            <Moisture /> Humidity {weather.humidity}%
+            <Moisture /> <p>Humidity {weather.humidity}%</p>
           </li>
           <li>
-            <ThermometerHalf /> Pressure {weather.pressure}hPa
+            <ThermometerHalf /> <p>Pressure {weather.pressure}hPa</p>
           </li>
         </ul>
       </div>
