@@ -9,7 +9,7 @@ function App({ openWeather }) {
     timezone: "",
     current: {},
     daily: [],
-    currentWeather: [],
+    currentWeather: {},
   });
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function App({ openWeather }) {
             timezone: result.timezone,
             current: result.current,
             daily: result.daily.splice(1),
-            currentWeather: result.current.weather,
+            currentWeather: result.current.weather[0],
           });
         });
     };
@@ -34,11 +34,16 @@ function App({ openWeather }) {
 
     navigator.geolocation.getCurrentPosition(getGeoSuccess, getGeoError);
   }, [openWeather]);
+
   console.log(weathers.currentWeather);
+
   return (
     <div className={styles.app}>
       <Header timezone={weathers.timezone} current={weathers.current} />
-      <WeatherCurrent weather={weathers.current} />
+      <WeatherCurrent
+        weather={weathers.current}
+        currentWeather={weathers.currentWeather}
+      />
       <WeatherList weathersList={weathers.daily} />
     </div>
   );

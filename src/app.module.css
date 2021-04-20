@@ -1,9 +1,10 @@
 .app {
   border-radius: 10px;
   width: 900px;
-  height: 500px;
   padding: 20px;
-  margin: 20vh auto;
+  margin: 10vh auto;
   font-family: "Roboto", sans-serif;
-  background-color: rgba(46, 45, 45, 0.465);
+  /* background: url("./img/alexander-nachev-bURLo2P5EzI-unsplash.jpg") no-repeat
+    center center/cover; */
+  background-color: rgba(46, 45, 45, 0.329);
 }

@@ -7,9 +7,12 @@
 }
 
 .weatherIcon {
-  font-size: 120px;
   margin-right: 5%;
   text-align: center;
+}
+
+.icon {
+  width: 140px;
 }
 
 .weatherIcon > p {

@@ -5,16 +5,21 @@ import { Moisture } from "react-bootstrap-icons";
 import { Eye } from "react-bootstrap-icons";
 import { ThermometerHalf } from "react-bootstrap-icons";
 
-const WeatherCurrent = ({ weather }) => {
+const WeatherCurrent = ({ weather, currentWeather }) => {
   return (
     <section className={styles.weatherCurrent}>
       <div className={styles.weatherIcon}>
-        <CloudSun />
-        <p>{weather.weather[0].description}</p>
+        {/* <CloudSun /> */}
+        <img
+          className={styles.icon}
+          src={`http://openweathermap.org/img/wn/${currentWeather.icon}@2x.png`}
+          alt=""
+        />
+        <p>{currentWeather.description}</p>
       </div>
       <div className={styles.temp}>
         <h1>
-          {Math.floor(weather.temp)}
+          {Math.round(weather.temp)}
           <span>°C</span>
           <p></p>
         </h1>

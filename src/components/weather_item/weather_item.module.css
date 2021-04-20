@@ -6,3 +6,29 @@
   padding: 30px 0;
   text-align: center;
 }
+
+.day {
+  font-size: 17px;
+}
+
+.date {
+  font-size: 13px;
+  color: rgb(185, 185, 185);
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 13px;
+}
+
+.temp > span {
+  color: rgb(185, 185, 185);
+}
+
+.main {
+  font-size: 13px;
+  color: rgb(185, 185, 185);
+}
+.rain {
+  font-size: 13px;
+}

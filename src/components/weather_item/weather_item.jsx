@@ -10,13 +10,21 @@ const WeatherItem = ({ weather }) => {
 
   return (
     <li className={styles.weather}>
-      <h4>{moment(date).format("dddd")}</h4>
-      <p>{moment(date).format("MMM Do")}</p>
-      <p>
-        온도 {weather.temp.day} <sup>o</sup>C
+      <p className={styles.day}>{moment(date).format("dddd")}</p>
+      <p className={styles.date}>{moment(date).format("MMM Do")}</p>
+      <p className={styles.temp}>
+        <span>Min</span> {weather.temp.min} <sup>o</sup>C
       </p>
-      <h5>날씨 {weather.weather[0].main}</h5>
-      {weather.rain && <p>강수량 {weather.rain}</p>}
+      <p className={styles.temp}>
+        <span>Max</span> {weather.temp.max} <sup>o</sup>C
+      </p>
+      <img
+        className={styles.icon}
+        src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+      />
+      <p className={styles.main}>{weather.weather[0].main}</p>
+      {weather.rain && <p className={styles.rain}>{weather.rain}mm</p>}
+      {weather.snow && <p className={styles.rain}>{weather.snow}mm</p>}
     </li>
   );
 };
