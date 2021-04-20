@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* border: 1px solid white; */
-  background: rgba(0, 0, 0, 0.753);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background: rgba(248, 248, 248, 0.342);
 }

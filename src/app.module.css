@@ -7,4 +7,5 @@
   /* background: url("./img/alexander-nachev-bURLo2P5EzI-unsplash.jpg") no-repeat
     center center/cover; */
   background-color: rgba(46, 45, 45, 0.329);
+  backdrop-filter: blur(3px);
 }

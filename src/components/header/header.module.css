@@ -1,11 +1,44 @@
 .header {
   text-align: center;
+  position: relative;
 }
+
 .city {
   font-weight: lighter;
   font-size: 24px;
 }
+
 .currDate {
   margin-top: 5px;
   font-size: 14px;
+}
+
+.units {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: flex;
+}
+.units label {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.units li {
+  color: rgb(219, 219, 219);
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.units input {
+  all: unset;
+}
+
+.radioControl {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid white;
 }

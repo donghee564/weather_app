@@ -2,7 +2,12 @@ import moment from "moment";
 import React from "react";
 import styles from "./weather_item.module.css";
 
-const WeatherItem = ({ weather }) => {
+const WeatherItem = ({ weather, unit }) => {
+  const minCels = Math.round(weather.temp.min);
+  const minFah = Math.round((minCels * 9) / 5 + 32);
+  const maxCels = Math.round(weather.temp.max);
+  const maxFah = Math.round((maxCels * 9) / 5 + 32);
+
   // moment를 이용한 dt data 변환
   let date = new Date();
   const day = weather.dt * 1000;
@@ -13,10 +18,10 @@ const WeatherItem = ({ weather }) => {
       <p className={styles.day}>{moment(date).format("dddd")}</p>
       <p className={styles.date}>{moment(date).format("MMM Do")}</p>
       <p className={styles.temp}>
-        <span>Min</span> {weather.temp.min} <sup>o</sup>C
+        <span>Min</span> {unit === "celsius" ? minCels + "°C" : minFah + "°F"}
       </p>
       <p className={styles.temp}>
-        <span>Max</span> {weather.temp.max} <sup>o</sup>C
+        <span>Max</span> {unit === "celsius" ? maxCels + "°C" : maxFah + "°F"}
       </p>
       <img
         className={styles.icon}

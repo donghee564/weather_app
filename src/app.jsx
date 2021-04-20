@@ -12,6 +12,12 @@ function App({ openWeather }) {
     currentWeather: {},
   });
 
+  const [unit, setUnit] = useState("celsius");
+
+  const handleUnitChange = (event) => {
+    setUnit(event.target.value);
+  };
+
   useEffect(() => {
     const getGeoSuccess = (pos) => {
       const lat = pos.coords.latitude;
@@ -35,16 +41,20 @@ function App({ openWeather }) {
     navigator.geolocation.getCurrentPosition(getGeoSuccess, getGeoError);
   }, [openWeather]);
 
-  console.log(weathers.currentWeather);
-
   return (
     <div className={styles.app}>
-      <Header timezone={weathers.timezone} current={weathers.current} />
+      <Header
+        handleUnitChange={handleUnitChange}
+        timezone={weathers.timezone}
+        current={weathers.current}
+        unit={unit}
+      />
       <WeatherCurrent
+        unit={unit}
         weather={weathers.current}
         currentWeather={weathers.currentWeather}
       />
-      <WeatherList weathersList={weathers.daily} />
+      <WeatherList unit={unit} weathersList={weathers.daily} />
     </div>
   );
 }
