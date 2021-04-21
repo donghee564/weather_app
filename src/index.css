@@ -6,6 +6,10 @@
   list-style: none;
 }
 body {
+  height: 150vh;
   color: #fff;
   background: url("./img/bg.jpg") no-repeat center center/cover fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

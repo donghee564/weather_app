@@ -5,40 +5,80 @@
 
 .city {
   font-weight: lighter;
-  font-size: 24px;
+  font-size: 35px;
 }
 
 .currDate {
-  margin-top: 5px;
-  font-size: 14px;
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: lighter;
 }
 
 .units {
   position: absolute;
   top: 0;
-  right: 10px;
+  left: 0;
   display: flex;
 }
 .units label {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: lighter;
 }
 .units li {
-  color: rgb(219, 219, 219);
-  border: 1px solid white;
+  color: rgb(240, 240, 240);
   display: flex;
   align-items: center;
   margin-left: 5px;
 }
 
-.units input {
-  all: unset;
+.radioBtn {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
 }
 
-.radioControl {
+.units .input {
+  all: unset;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkMark {
+  margin-right: 2px;
   display: block;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 1px solid white;
+  background-color: rgb(226, 226, 226);
+  transition: all 0.35s;
+}
+
+.units .radioBtn:hover .checkMark {
+  background-color: #fff;
+}
+
+.units .input:checked ~ .checkMark {
+  /* background-color: #ccc; */
+  background: radial-gradient(rgb(240, 99, 18) 50%, #ccc 51%);
+}
+
+.search {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  all: unset;
+  border-bottom: 1px solid #fff;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.searchIcon {
+  all: unset;
+  font-size: 20px;
 }

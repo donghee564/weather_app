@@ -28,19 +28,31 @@ const WeatherCurrent = ({ unit, weather, currentWeather }) => {
         <p>Feels like {unit === "celsius" ? feelsLikecels : feelsLikefah}°</p>
       </div>
       <div className={styles.details}>
-        <h3>MORE DETAILS</h3>
+        {/* <h3>MORE DETAILS</h3> */}
         <ul>
           <li>
-            <Wind /> <p>Wind {weather.wind_speed}m/s</p>
+            <span className={styles.listIcon}>
+              <Wind />
+            </span>
+            <p>Wind {weather.wind_speed}m/s</p>
           </li>
           <li>
-            <Eye /> <p>Visibility {weather.visibility * 0.001}km</p>
+            <span className={styles.listIcon}>
+              <Eye />
+            </span>
+            <p>Visibility {weather.visibility * 0.001}km</p>
           </li>
           <li>
-            <Moisture /> <p>Humidity {weather.humidity}%</p>
+            <span className={styles.listIcon}>
+              <Moisture />
+            </span>
+            <p>Humidity {weather.humidity}%</p>
           </li>
           <li>
-            <ThermometerHalf /> <p>Pressure {weather.pressure}hPa</p>
+            <span className={styles.listIcon}>
+              <ThermometerHalf />
+            </span>
+            <p>Pressure {weather.pressure}hPa</p>
           </li>
         </ul>
       </div>

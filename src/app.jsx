@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import WeatherList from "./components/weather_list/weather_list";
 import styles from "./app.module.css";
 import WeatherCurrent from "./components/weather_current/weather_current";
 import Header from "./components/header/header";
+import SearchedWeatherList from "./components/searched_weather_list/searched_weather_list";
 
 function App({ openWeather }) {
   const [weathers, setWeathers] = useState({
@@ -10,6 +11,11 @@ function App({ openWeather }) {
     current: {},
     daily: [],
     currentWeather: {},
+  });
+
+  const [searchWeather, setSearchWeather] = useState({
+    list: [],
+    city: {},
   });
 
   const [unit, setUnit] = useState("celsius");
@@ -41,9 +47,28 @@ function App({ openWeather }) {
     navigator.geolocation.getCurrentPosition(getGeoSuccess, getGeoError);
   }, [openWeather]);
 
+  const handleSearch = useCallback(
+    (query) => {
+      openWeather
+        .searchWeather(query) //
+        .then((result) => {
+          const dailyWeather = result.list.filter((item) =>
+            item.dt_txt.includes("18:00:00")
+          );
+          setSearchWeather({
+            list: dailyWeather,
+            city: result.city,
+          });
+        })
+        .catch(() => alert("Please enter a valid city name"));
+    },
+    [openWeather]
+  );
+
   return (
     <div className={styles.app}>
       <Header
+        onSearch={handleSearch}
         handleUnitChange={handleUnitChange}
         timezone={weathers.timezone}
         current={weathers.current}
@@ -55,6 +80,14 @@ function App({ openWeather }) {
         currentWeather={weathers.currentWeather}
       />
       <WeatherList unit={unit} weathersList={weathers.daily} />
+      {searchWeather.city.name && (
+        <SearchedWeatherList
+          city={searchWeather.city}
+          list={searchWeather.list}
+          unit={unit}
+          current={weathers.current}
+        />
+      )}
     </div>
   );
 }

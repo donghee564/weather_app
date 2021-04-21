@@ -3,12 +3,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 5%;
 }
 
 .weatherIcon {
-  margin-right: 5%;
   text-align: center;
+  margin-left: 4%;
 }
 
 .icon {
@@ -21,14 +20,15 @@
 }
 
 .temp {
-  margin-right: 5%;
+  margin-left: 5%;
 }
+
 .temp p {
   text-align: center;
 }
 .temp > h1 {
-  font-size: 120px;
-  letter-spacing: -1.5px;
+  font-size: 115px;
+  letter-spacing: -2px;
   color: rgb(221, 218, 61);
 }
 
@@ -42,20 +42,24 @@
   font-size: 18px;
 }
 
-.details > h3 {
-  font-weight: lighter;
-  font-size: 19px;
-  margin-top: 20px;
+.details {
+  margin-top: 30px;
+  margin-left: 6%;
 }
 
 .details ul li {
+  padding-bottom: 4px;
   font-weight: lighter;
-  margin-top: 9px;
   display: flex;
   align-items: center;
   font-size: 16px;
 }
 
+.details ul li .listIcon {
+  font-size: 23px;
+}
+
 .details ul li p {
   margin-left: 10px;
+  margin-top: -3px;
 }
