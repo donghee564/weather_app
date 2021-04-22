@@ -1,0 +1,42 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  border: 0px solid gray;
+  width: 15%;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.day {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.date,
+.time {
+  font-size: 13px;
+  color: rgb(209, 209, 209);
+}
+
+.temp {
+  font-size: 13px;
+}
+
+.temp > span {
+  color: rgb(209, 209, 209);
+}
+
+.main {
+  margin-top: -10px;
+  font-size: 14px;
+}
+.rain {
+  font-size: 13px;
+}
+
+.details {
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(209, 209, 209);
+}

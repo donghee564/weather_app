@@ -4,6 +4,7 @@ import styles from "./app.module.css";
 import WeatherCurrent from "./components/weather_current/weather_current";
 import Header from "./components/header/header";
 import SearchedWeatherList from "./components/searched_weather_list/searched_weather_list";
+import Raindrops from "./video/raindrops.mp4";
 
 function App({ openWeather }) {
   const [weathers, setWeathers] = useState({
@@ -67,27 +68,32 @@ function App({ openWeather }) {
 
   return (
     <div className={styles.app}>
-      <Header
-        onSearch={handleSearch}
-        handleUnitChange={handleUnitChange}
-        timezone={weathers.timezone}
-        current={weathers.current}
-        unit={unit}
-      />
-      <WeatherCurrent
-        unit={unit}
-        weather={weathers.current}
-        currentWeather={weathers.currentWeather}
-      />
-      <WeatherList unit={unit} weathersList={weathers.daily} />
-      {searchWeather.city.name && (
-        <SearchedWeatherList
-          city={searchWeather.city}
-          list={searchWeather.list}
-          unit={unit}
+      <video className={styles.video} loop autoPlay muted>
+        <source src={Raindrops} type="video/mp4" />
+      </video>
+      <section className={styles.weather}>
+        <Header
+          onSearch={handleSearch}
+          handleUnitChange={handleUnitChange}
+          timezone={weathers.timezone}
           current={weathers.current}
+          unit={unit}
         />
-      )}
+        <WeatherCurrent
+          unit={unit}
+          weather={weathers.current}
+          currentWeather={weathers.currentWeather}
+        />
+        <WeatherList unit={unit} weathersList={weathers.daily} />
+        {searchWeather.city.name && (
+          <SearchedWeatherList
+            city={searchWeather.city}
+            list={searchWeather.list}
+            unit={unit}
+            current={weathers.current}
+          />
+        )}
+      </section>
     </div>
   );
 }
