@@ -29,7 +29,7 @@
 .temp > h1 {
   font-size: 115px;
   letter-spacing: -2px;
-  color: rgb(221, 218, 61);
+  color: #fff;
 }
 
 .temp > h1 > span {

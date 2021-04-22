@@ -1,13 +1,14 @@
-import React from "react";
+import React, { memo } from "react";
 import moment from "moment";
 import SearchedWeatherItem from "../searched_weather_item/searched_weather_item";
 import styles from "./searched_weather_list.module.css";
+import { X } from "react-bootstrap-icons";
 
-const SearchedWeatherList = ({ city, list, unit }) => {
+const SearchedWeatherList = ({ city, list, unit, onClick }) => {
   const timezoneInMin = city.timezone / 60;
 
   return (
-    <>
+    <section className={styles.wrap}>
       <h1 className={styles.title}>
         {city.country} / {city.name}
       </h1>
@@ -21,8 +22,11 @@ const SearchedWeatherList = ({ city, list, unit }) => {
           <SearchedWeatherItem weather={weather} key={weather.dt} unit={unit} />
         ))}
       </ul>
-    </>
+      <button onClick={onClick} className={styles.button}>
+        <X />
+      </button>
+    </section>
   );
 };
 
-export default SearchedWeatherList;
+export default memo(SearchedWeatherList);

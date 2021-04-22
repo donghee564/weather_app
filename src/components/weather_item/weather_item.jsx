@@ -1,5 +1,5 @@
 import moment from "moment";
-import React from "react";
+import React, { memo } from "react";
 import styles from "./weather_item.module.css";
 
 const WeatherItem = ({ weather, unit }) => {
@@ -35,4 +35,4 @@ const WeatherItem = ({ weather, unit }) => {
   );
 };
 
-export default WeatherItem;
+export default memo(WeatherItem);

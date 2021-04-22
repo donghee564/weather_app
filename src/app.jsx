@@ -4,7 +4,7 @@ import styles from "./app.module.css";
 import WeatherCurrent from "./components/weather_current/weather_current";
 import Header from "./components/header/header";
 import SearchedWeatherList from "./components/searched_weather_list/searched_weather_list";
-import Raindrops from "./video/raindrops.mp4";
+import Raindrops from "./video/raindrops-comp.mp4";
 
 function App({ openWeather }) {
   const [weathers, setWeathers] = useState({
@@ -66,6 +66,19 @@ function App({ openWeather }) {
     [openWeather]
   );
 
+  const handleClick = () => {
+    console.log("sdfsdf");
+  };
+
+  const showSearchedWeather = searchWeather.city.name && (
+    <SearchedWeatherList
+      onClick={handleClick}
+      city={searchWeather.city}
+      list={searchWeather.list}
+      unit={unit}
+    />
+  );
+
   return (
     <div className={styles.app}>
       <video className={styles.video} loop autoPlay muted>
@@ -85,14 +98,7 @@ function App({ openWeather }) {
           currentWeather={weathers.currentWeather}
         />
         <WeatherList unit={unit} weathersList={weathers.daily} />
-        {searchWeather.city.name && (
-          <SearchedWeatherList
-            city={searchWeather.city}
-            list={searchWeather.list}
-            unit={unit}
-            current={weathers.current}
-          />
-        )}
+        {showSearchedWeather}
       </section>
     </div>
   );

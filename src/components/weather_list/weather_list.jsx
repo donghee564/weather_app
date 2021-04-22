@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import WeatherItem from "../weather_item/weather_item";
 import styles from "./weather_list.module.css";
 
@@ -10,4 +10,4 @@ const WeatherList = ({ weathersList, unit }) => (
   </ul>
 );
 
-export default WeatherList;
+export default memo(WeatherList);

@@ -13,7 +13,7 @@
 
 .date {
   font-size: 13px;
-  color: rgb(185, 185, 185);
+  color: rgb(209, 209, 209);
   margin-bottom: 10px;
 }
 
@@ -22,12 +22,12 @@
 }
 
 .temp > span {
-  color: rgb(185, 185, 185);
+  color: rgb(209, 209, 209);
 }
 
 .main {
   font-size: 13px;
-  color: rgb(185, 185, 185);
+  color: rgb(209, 209, 209);
 }
 .rain {
   font-size: 13px;
