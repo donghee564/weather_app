@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .weatherIcon {
@@ -62,4 +63,38 @@
 .details ul li p {
   margin-left: 10px;
   margin-top: -3px;
+}
+
+@media screen and (max-width: 600px) {
+  .weatherCurrent {
+    margin-top: 5px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+  .weatherIcon {
+    margin: 0;
+    margin-left: 5%;
+  }
+  .weatherIcon p {
+    font-size: 0.8em;
+  }
+  .icon {
+    width: 60px;
+  }
+  .weatherCurrent .temp {
+    margin: 0;
+  }
+  .weatherCurrent .temp > h1 {
+    font-size: 3.5em;
+    margin: 0;
+  }
+  .temp > h1 > span {
+    font-size: 0.7em;
+  }
+  .temp p {
+    font-size: 0.9em;
+  }
+  .details {
+    display: none;
+  }
 }

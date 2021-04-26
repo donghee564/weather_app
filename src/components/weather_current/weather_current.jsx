@@ -15,7 +15,7 @@ const WeatherCurrent = ({ unit, weather, currentWeather }) => {
       <div className={styles.weatherIcon}>
         <img
           className={styles.icon}
-          src={`http://openweathermap.org/img/wn/${currentWeather.icon}@2x.png`}
+          src={`https://www.openweathermap.org/img/wn/${currentWeather.icon}@2x.png`}
           alt=""
         />
         <p>{currentWeather.description}</p>
@@ -28,7 +28,6 @@ const WeatherCurrent = ({ unit, weather, currentWeather }) => {
         <p>Feels like {unit === "celsius" ? feelsLikecels : feelsLikefah}°</p>
       </div>
       <div className={styles.details}>
-        {/* <h3>MORE DETAILS</h3> */}
         <ul>
           <li>
             <span className={styles.listIcon}>

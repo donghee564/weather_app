@@ -8,3 +8,8 @@
   backdrop-filter: blur(10px);
   background: rgba(248, 248, 248, 0.342);
 }
+
+@media screen and (max-width: 600px) {
+  .weatherList {
+  }
+}

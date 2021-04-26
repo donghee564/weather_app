@@ -20,7 +20,7 @@ const SearchedWeatherItem = ({ weather, unit }) => {
         </p>
         <img
           className={styles.icon}
-          src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+          src={`https://www.openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
           alt={weather.weather[0].icon}
         />
         <p className={styles.main}>{weather.weather[0].main}</p>
@@ -30,7 +30,7 @@ const SearchedWeatherItem = ({ weather, unit }) => {
       <ul className={styles.details}>
         <li>Wind {weather.wind.speed} m/s</li>
         <li>Visibility {weather.visibility * 0.001}km</li>
-        <li>Humidity {weather.main.humidity} %</li>
+        <li>Humidity {weather.main.humidity}%</li>
         <li>Pressure {weather.main.pressure} hPa</li>
       </ul>
     </li>

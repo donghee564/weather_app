@@ -17,11 +17,13 @@ const Header = ({ unit, timezone, current, handleUnitChange, onSearch }) => {
   const onKeyPress = (e) => {
     if (e.key === "Enter") {
       handleSearch();
+      inputRef.current.value = "";
     }
   };
 
   const onClick = () => {
     handleSearch();
+    inputRef.current.value = "";
   };
 
   return (
@@ -68,7 +70,7 @@ const Header = ({ unit, timezone, current, handleUnitChange, onSearch }) => {
           onKeyPress={onKeyPress}
           ref={inputRef}
           type="search"
-          placeholder="Search City Name"
+          placeholder="Search by City Name"
         />
         <button className={styles.searchIcon} onClick={onClick} type="submit">
           <Search />

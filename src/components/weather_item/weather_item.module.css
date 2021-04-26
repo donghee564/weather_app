@@ -32,3 +32,26 @@
 .rain {
   font-size: 13px;
 }
+
+@media screen and (max-width: 600px) {
+  .weather {
+    width: 21%;
+    margin: 0 2%;
+    padding: 5% 0;
+  }
+  .day {
+    font-size: 0.75em;
+  }
+  .date {
+    font-size: 0.7em;
+  }
+  .temp {
+    font-size: 0.65em;
+  }
+  .main {
+    font-size: 0.65em;
+  }
+  .rain {
+    font-size: 0.65em;
+  }
+}

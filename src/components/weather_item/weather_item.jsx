@@ -25,7 +25,7 @@ const WeatherItem = ({ weather, unit }) => {
       </p>
       <img
         className={styles.icon}
-        src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+        src={`https://www.openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
         alt={weather.weather[0].icon}
       />
       <p className={styles.main}>{weather.weather[0].main}</p>

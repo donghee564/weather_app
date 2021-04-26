@@ -67,7 +67,10 @@ function App({ openWeather }) {
   );
 
   const handleClick = () => {
-    console.log("sdfsdf");
+    setSearchWeather({
+      list: [],
+      city: {},
+    });
   };
 
   const showSearchedWeather = searchWeather.city.name && (

@@ -24,3 +24,9 @@
   top: 0;
   object-fit: cover;
 }
+
+@media screen and (max-width: 600px) {
+  .weather {
+    width: 90%;
+  }
+}

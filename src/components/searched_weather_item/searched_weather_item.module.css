@@ -40,3 +40,36 @@
   line-height: 20px;
   color: rgb(209, 209, 209);
 }
+
+@media screen and (max-width: 600px) {
+  .weather {
+    width: 28%;
+    margin: 0 2%;
+    padding: 5% 0;
+  }
+  .day {
+    font-size: 0.8em;
+  }
+  .date,
+  .time {
+    font-size: 0.7em;
+  }
+  .temp {
+    font-size: 0.65em;
+  }
+  .main {
+    font-size: 0.65em;
+  }
+  .rain {
+    font-size: 0.65em;
+  }
+  .icon {
+    width: 3em;
+  }
+  .details {
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+}
