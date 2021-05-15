@@ -19,7 +19,6 @@ API calls - 현재의 위도 경도를 통한 현재 날씨 세부정보, 검색
    - 검색한 도시가 있으면 그 도시의 7일간의 날씨 정보 표시.
    
 #### 사용 라이브러리
- - axios
  - react-bootstrap-icons
  - moment
 
