@@ -1,6 +1,7 @@
 .header {
   text-align: center;
   position: relative;
+  box-sizing: border-box;
 }
 
 .city {
@@ -81,4 +82,20 @@
 .searchIcon {
   all: unset;
   font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .city {
+    font-size: 1.6em;
+    padding-top: 50px;
+  }
+  .currDate {
+    font-size: 0.9em;
+  }
+  .search {
+    width: 40%;
+  }
+  .searchInput {
+    width: 100%;
+  }
 }

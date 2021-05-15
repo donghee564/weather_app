@@ -30,7 +30,7 @@ const SearchedWeatherItem = ({ weather, unit }) => {
       <ul className={styles.details}>
         <li>Wind {weather.wind.speed} m/s</li>
         <li>Visibility {weather.visibility * 0.001}km</li>
-        <li>Humidity {weather.main.humidity} %</li>
+        <li>Humidity {weather.main.humidity}%</li>
         <li>Pressure {weather.main.pressure} hPa</li>
       </ul>
     </li>
