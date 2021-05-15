@@ -5,6 +5,7 @@ import { Eye } from "react-bootstrap-icons";
 import { ThermometerHalf } from "react-bootstrap-icons";
 
 const WeatherCurrent = ({ unit, weather, currentWeather }) => {
+  // 온도 단위 변환 계산식 (default: celcius)
   const cels = Math.round(weather.temp);
   const fah = Math.round((cels * 9) / 5 + 32);
   const feelsLikecels = Math.round(weather.feels_like);
@@ -15,8 +16,8 @@ const WeatherCurrent = ({ unit, weather, currentWeather }) => {
       <div className={styles.weatherIcon}>
         <img
           className={styles.icon}
-          src={`http://openweathermap.org/img/wn/${currentWeather.icon}@2x.png`}
-          alt=""
+          src={`https://www.openweathermap.org/img/wn/${currentWeather.icon}@2x.png`} // openweathermap 에서 제공하는 날씨 아이콘
+          alt="weather-icon"
         />
         <p>{currentWeather.description}</p>
       </div>

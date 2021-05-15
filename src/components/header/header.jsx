@@ -8,20 +8,22 @@ const Header = ({ unit, timezone, current, handleUnitChange, onSearch }) => {
   const day = current.dt * 1000;
   date.setTime(day);
   const inputRef = useRef();
-
+  // 검색창 input 처리 함수
   const handleSearch = () => {
     const value = inputRef.current.value;
     onSearch(value);
   };
-
+  // 검색 input창 엔터를 누를시 handleSearch 함수 실행
   const onKeyPress = (e) => {
     if (e.key === "Enter") {
       handleSearch();
+      inputRef.current.value = "";
     }
   };
-
+  // 검색 아이콘 클릭시 handleSearch 함수 실행
   const onClick = () => {
     handleSearch();
+    inputRef.current.value = "";
   };
 
   return (
@@ -68,7 +70,7 @@ const Header = ({ unit, timezone, current, handleUnitChange, onSearch }) => {
           onKeyPress={onKeyPress}
           ref={inputRef}
           type="search"
-          placeholder="Search City Name"
+          placeholder="Search by City Name"
         />
         <button className={styles.searchIcon} onClick={onClick} type="submit">
           <Search />
