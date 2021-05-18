@@ -1,4 +1,4 @@
-### OpenWeatherMAp API 를 활용한 weather-app
+### OpenWeatherMp API 를 활용한 weather-app
 (create-react-app)
 데모 - https://donghee564.github.io/weather_app/<br>
 API 출처 - OpenWeatherMap: https://openweathermap.org/
