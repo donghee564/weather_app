@@ -1,7 +1,9 @@
 ### OpenWeatherMp API 를 활용한 weather-app
 (create-react-app)
 데모 - https://donghee564.github.io/weather_app/<br>
-API 출처 - OpenWeatherMap: https://openweathermap.org/
+API 출처 - OpenWeatherMap: https://openweathermap.org/<br>
+-반응형 (모바일, 웹)<br>
+-퍼블리싱 100%
 
 #### 구조와 기능 요약
 API calls - 현재의 위도 경도를 통한 현재 날씨 세부정보, 검색 인풋에 입력한 도시의 7일 날씨 세부정보
