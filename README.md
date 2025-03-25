@@ -1,4 +1,5 @@
 ### OpenWeatherMp API 를 활용한 weather-app
+#### ⚠️: 데모는 마이크로소프트 Edge에서 확인 가능합니다.!
 (create-react-app)
 데모 - https://donghee564.github.io/weather_app/<br>
 API 출처 - OpenWeatherMap: https://openweathermap.org/<br>
