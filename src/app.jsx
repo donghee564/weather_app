@@ -38,7 +38,7 @@ function App({ openWeather }) {
             timezone: result.timezone,
             current: result.current,
             daily: result.daily.splice(1), // 오늘 날씨 정보를 제외한 7일간의 날씨 정보를 daily 에 설정
-            currentWeather: result.current.weather[0], // 현재 날짜의 날씨 정보만 currentWeather 에 설정
+            currentWeather: result.current.weather[0], // 현재 날짜의 날씨(배열의 첫번째 아이템) 정보만 currentWeather 에 설정
           });
         });
     };
